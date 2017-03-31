@@ -13,6 +13,7 @@ cabal-install
 calc
 cheese
 clang-tools-extra
+cmake
 coreutils
 cryptsetup
 device-mapper
@@ -59,6 +60,7 @@ htop
 i3-wm
 i3lock
 i3status
+imagemagick
 inetutils
 iproute2
 iputils
@@ -114,6 +116,7 @@ sudo
 sysfsutils
 systemd-sysvcompat
 tar
+teamspeak3
 texinfo
 thunar
 thunar-archive-plugin
