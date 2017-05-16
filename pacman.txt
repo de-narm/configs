@@ -1,7 +1,6 @@
 adobe-source-han-sans-jp-fonts
 alsa-utils
 arc-gtk-theme
-artikulate
 audacity
 autoconf
 automake
@@ -16,6 +15,7 @@ clang-tools-extra
 cmake
 coreutils
 cryptsetup
+cups
 device-mapper
 dhcpcd
 dialog
@@ -53,6 +53,7 @@ groff
 grub
 gtk-engine-murrine
 gtk-xfce-engine
+gtk3-print-backends
 gvfs
 gvim
 gzip
@@ -88,6 +89,7 @@ nano
 netctl
 network-manager-applet
 networkmanager
+okular
 openssh
 orage
 pacman
@@ -110,10 +112,12 @@ rsync
 s-nail
 sed
 shadow
+sshfs
 steam
 steam-native-runtime
 sudo
 sysfsutils
+system-config-printer
 systemd-sysvcompat
 tar
 teamspeak3
