@@ -33,6 +33,7 @@ findutils
 firefox
 flashplugin
 flex
+fontforge
 garcon
 gawk
 gcc
@@ -135,6 +136,7 @@ util-linux
 vi
 virtualbox
 virtualbox-guest-iso
+vundle
 which
 wine
 wpa_supplicant
@@ -145,6 +147,7 @@ xf86-input-mouse
 xf86-input-synaptics
 xf86-input-vmmouse
 xf86-input-void
+xf86-input-wacom
 xf86-video-amdgpu
 xf86-video-ati
 xf86-video-dummy

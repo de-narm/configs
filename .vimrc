@@ -1,3 +1,21 @@
+"Vundle begin
+set nocompatible 
+filetype off 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()        
+
+"YCM
+let g:ycm_global_ycm_extra_conf = ''
+let g:ycm_server_python_interpreter = '/usr/bin/python2'
+let g:ycm_python_binary_path = '/usr/bin/python2'
+let g:ycm_max_diagnostics_to_display = 0
+"Vundle end
+
 "well, syntaxhighlighting
 syntax on
 
@@ -7,7 +25,7 @@ set wrap
 "show partial commands
 set showcmd
 
-"keep the smae line 
+"indent new line 
 set autoindent
 
 "numbers
@@ -29,6 +47,9 @@ set expandtab
 "no reselect after indention
 vnoremap > >gv
 vnoremap < <gv
+
+"read changes from outside to opend file
+set autoread
 
 "clang
 map <C-K> :pyf /usr/share/clang/clang-format.py<cr>
