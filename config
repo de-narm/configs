@@ -40,6 +40,7 @@ focus_follows_mouse no
 
 # start a terminal
 bindsym $mod+Ctrl+t exec i3-sensible-terminal
+bindsym $mod+Ctrl+c exec cool-retro-term
 
 # volume control
 bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -176,5 +177,5 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         position top
-        font pango:DejaVu Sans Mono 10
+        font pango:DejaVu Sans Mono 9
 }
