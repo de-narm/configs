@@ -1,4 +1,4 @@
-feh --bg-scale /home/de/Files/xMisc/Wallpaper/fox.jpg &
+feh --bg-scale /home/de/Files/xMisc/Wallpaper/vibrant.png &
 #mplayer -loop 0 -rootwin -ao null -noconsolecontrols -fs /home/de/Files/xMisc/Wallpaper/rose.mp4 &
 xset s off &
 xset -dpms &
