@@ -3,5 +3,8 @@ feh --bg-scale /home/de/Files/xMisc/Wallpaper/vibrant.png &
 xset s off &
 xset -dpms &
 #redshift -l 51.0504:13.7373 &
-compton &
+telegram-desktop &
+birdtray &
+orage &
+compton --config /home/de/.config/compton.conf -b &
 exec i3
