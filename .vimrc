@@ -53,6 +53,15 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+"""""""""""""""""""""Extensions""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd VimEnter *       RainbowParenthesesToggle
+autocmd Syntax   clojure RainbowParenthesesLoadRound
+autocmd Syntax   clojure RainbowParenthesesLoadSquare
+autocmd Syntax   clojure RainbowParenthesesLoadBraces
+" Evaluate Clojure buffers on load
+autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
+
+
 """""""""""""""""""""Filespecific changes""""""""""""""""""""""""""""""""""""""
 "clojure tabstops 
 autocmd Filetype clojure setlocal tabstop=2

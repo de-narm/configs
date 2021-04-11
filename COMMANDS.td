@@ -132,7 +132,6 @@ Nachsendeauftrag:  U6673566  (Bestell: 3207966933)
 
 Waschmaschiene 104925357
 
-##################################ClojureVim###################################
+##################################Vimextensions################################
 
-fireplace
-clojure_highlight https://github.com/guns/vim-clojure-highlight
+https://github.com/kien/rainbow_parentheses.vim
