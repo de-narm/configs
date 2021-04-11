@@ -19,6 +19,7 @@ cheese
 cherrytomato
 chromium
 clisp
+clojure
 cmake
 cool-retro-term
 coreutils
@@ -32,6 +33,7 @@ diffutils
 discord-canary
 dmenu
 e2fsprogs
+edex-ui
 evince
 exo
 fakeroot
@@ -102,7 +104,9 @@ licenses
 linux
 logrotate
 lshw
+luit
 lvm2
+lwjgl
 m4
 make
 man-db
@@ -118,6 +122,7 @@ netctl
 network-manager-applet
 networkmanager
 networkmanager-openvpn
+nvm
 openmp
 openmpi
 openssh
@@ -144,7 +149,7 @@ python-mistune
 python-networkx
 python-pip
 python-qroundprogressbar
-python-sip
+python-sip4
 python-utils
 python2-basemap
 python2-mistune
@@ -275,12 +280,14 @@ xfdesktop
 xfsprogs
 xfwm4
 xfwm4-themes
+xmobar
+xmonad
+xmonad-contrib
 xorg-bdftopcf
 xorg-docs
 xorg-font-util
 xorg-fonts-100dpi
 xorg-fonts-75dpi
-xorg-luit
 xorg-server
 xorg-server-common
 xorg-server-devel
@@ -288,7 +295,6 @@ xorg-server-xdmx
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb
-xorg-server-xwayland
 xorg-sessreg
 xorg-setxkbmap
 xorg-smproxy
@@ -315,6 +321,7 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
+xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
