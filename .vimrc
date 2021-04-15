@@ -3,6 +3,7 @@
 syntax on
 
 "colorscheme
+set background=dark
 colorscheme solarized
 
 "wrap according to window size
@@ -61,11 +62,20 @@ autocmd VimEnter *       RainbowParenthesesToggle
 autocmd Syntax   clojure RainbowParenthesesLoadRound
 autocmd Syntax   clojure RainbowParenthesesLoadSquare
 autocmd Syntax   clojure RainbowParenthesesLoadBraces
-" Evaluate Clojure buffers on load
-autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
-
 
 """""""""""""""""""""Filespecific changes""""""""""""""""""""""""""""""""""""""
+"clojure highlights
+""all numbers are highlighted 
+autocmd Syntax clojure hi AllNumbers ctermfg=DarkCyan
+autocmd Syntax clojure syntax match AllNumbers /\(\s-\?[0-9]\+\.\?[0-9]*\_s\)/
+""reader macro 'comment'
+autocmd Syntax clojure hi RoundReader ctermfg=Green
+autocmd Syntax clojure syntax match RoundReader /\(#_(\(\_s\|[^)]\)*)\)/
+autocmd Syntax clojure hi SquareReader ctermfg=Green
+autocmd Syntax clojure syntax match SquareReader /\(#_\[\(\_s\|[^\]]\)*\]\)/
+autocmd Syntax clojure hi BraceReader ctermfg=Green
+autocmd Syntax clojure syntax match BraceReader /\(#_{\(\_s\|[^}]\)*}\)/
+
 "clojure tabstops 
 autocmd Filetype clojure setlocal tabstop=2
 autocmd Filetype clojure setlocal softtabstop=2
