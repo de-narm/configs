@@ -2,6 +2,9 @@
 "well, syntaxhighlighting
 syntax on
 
+"colorscheme
+colorscheme solarized
+
 "wrap according to window size
 set wrap lbr
 
