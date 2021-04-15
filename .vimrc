@@ -68,6 +68,9 @@ autocmd Syntax   clojure RainbowParenthesesLoadBraces
 ""all numbers are highlighted 
 autocmd Syntax clojure hi AllNumbers ctermfg=DarkCyan
 autocmd Syntax clojure syntax match AllNumbers /\(\s-\?[0-9]\+\.\?[0-9]*\_s\)/
+""TODO
+autocmd Syntax clojure hi TodoError ctermfg=Magenta cterm=bold
+autocmd Syntax clojure syntax match TodoError /\(.*;\(TODO\|FIXME\).*\)/
 ""reader macro 'comment'
 autocmd Syntax clojure hi RoundReader ctermfg=Green
 autocmd Syntax clojure syntax match RoundReader /\(#_(\(\_s\|[^)]\)*)\)/
