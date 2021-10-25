@@ -64,25 +64,25 @@ autocmd Syntax   clojure RainbowParenthesesLoadSquare
 autocmd Syntax   clojure RainbowParenthesesLoadBraces
 
 """""""""""""""""""""Filespecific changes""""""""""""""""""""""""""""""""""""""
-"clojure highlights
-""all numbers are highlighted 
-autocmd Syntax clojure hi NegNumbers ctermfg=DarkCyan
-autocmd Syntax clojure syntax match NegNumbers /\(-[0-9]\+\)/
-autocmd Syntax clojure hi FloatNumbers ctermfg=DarkCyan
-autocmd Syntax clojure syntax match FloatNumbers /\(-\?[0-9]\+\.[0-9]*\)/
-""TODO
-autocmd Syntax clojure hi TodoError ctermfg=Magenta cterm=bold
-autocmd Syntax clojure syntax match TodoError /\(;\+.*\(TODO\|FIXME\).*\)/
-""keys
-autocmd Syntax clojure hi Keys ctermfg=DarkBlue
-autocmd Syntax clojure syntax match Keys /\(:[-A-z]\+\)/
-""reader macro 'comment'
-autocmd Syntax clojure hi RoundReader ctermfg=Green
-autocmd Syntax clojure syntax match RoundReader /\(#_(\(\_s\|[^)]\)*)\)/
-autocmd Syntax clojure hi SquareReader ctermfg=Green
-autocmd Syntax clojure syntax match SquareReader /\(#_\[\(\_s\|[^\]]\)*\]\)/
-autocmd Syntax clojure hi BraceReader ctermfg=Green
-autocmd Syntax clojure syntax match BraceReader /\(#_{\(\_s\|[^}]\)*}\)/
+""clojure highlights
+"""all numbers are highlighted 
+"autocmd Syntax clojure hi NegNumbers ctermfg=DarkCyan
+"autocmd Syntax clojure syntax match NegNumbers /\(-[0-9]\+\)/
+"autocmd Syntax clojure hi FloatNumbers ctermfg=DarkCyan
+"autocmd Syntax clojure syntax match FloatNumbers /\(-\?[0-9]\+\.[0-9]*\)/
+"""TODO
+"autocmd Syntax clojure hi TodoError ctermfg=Magenta cterm=bold
+"autocmd Syntax clojure syntax match TodoError /\(;\+.*\(TODO\|FIXME\).*\)/
+"""keys
+"autocmd Syntax clojure hi Keys ctermfg=DarkBlue
+"autocmd Syntax clojure syntax match Keys /\(:[-A-z]\+\)/
+"""reader macro 'comment'
+"autocmd Syntax clojure hi RoundReader ctermfg=Green
+"autocmd Syntax clojure syntax match RoundReader /\(#_(\(\_s\|[^)]\)*)\)/
+"autocmd Syntax clojure hi SquareReader ctermfg=Green
+"autocmd Syntax clojure syntax match SquareReader /\(#_\[\(\_s\|[^\]]\)*\]\)/
+"autocmd Syntax clojure hi BraceReader ctermfg=Green
+"autocmd Syntax clojure syntax match BraceReader /\(#_{\(\_s\|[^}]\)*}\)/
 
 "clojure tabstops 
 autocmd Filetype clojure setlocal tabstop=2

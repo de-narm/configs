@@ -3,7 +3,7 @@ feh --bg-scale /home/de/Files/xMisc/Wallpaper/vibrant.png &
 xset s off &
 xset -dpms &
 setxkbmap -layout de -option caps:escape &
-#redshift -l 51.0504:13.7373 &
+redshift -l 51.0504:13.7373 &
 telegram-desktop &
 birdtray &
 orage &

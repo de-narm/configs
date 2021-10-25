@@ -51,7 +51,10 @@ grep -R -i "Hello" .
 :hi Comment ctermfg=darkgrey
 
 #wenn java wieder fehlen sollte
-export JAVA_CMD="/usr/lib/jvm/java-14-openjdk/bin/java"
+export JAVA_CMD="/usr/lib/jvm/java-15-openjdk/bin/java"
+
+#rekursive suche in allen files
+grep -rnsI "JAVA_CMD" *
 
 #start api server with clj ring
 lein repl :headless
@@ -127,11 +130,13 @@ ahTui9ee
 
 mf - standard mit n
 mf Nummer: 15389394 2600066201
+TREinzahlung - 8000
 
 Nachsendeauftrag:  U6673566  (Bestell: 3207966933)
 
-Waschmaschiene 104925357
+Waschmaschiene 104925357-SBAY7C
 
 ##################################Vimextensions################################
 
 https://github.com/kien/rainbow_parentheses.vim
+Vim.fireplace

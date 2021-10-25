@@ -26,11 +26,12 @@ coreutils
 cryptsetup
 csfml
 cups
+desmume
 device-mapper
 dhcpcd
 dialog
 diffutils
-discord-canary
+discord
 dmenu
 e2fsprogs
 edex-ui
@@ -113,7 +114,7 @@ man-db
 man-pages
 mariadb
 mdadm
-mgba-sdl
+mgba-qt
 minecraft-launcher
 mousepad
 mplayer
@@ -218,7 +219,6 @@ vundle
 weechat
 wget
 which
-wine
 wpa_supplicant
 xf86-input-evdev
 xf86-input-keyboard
