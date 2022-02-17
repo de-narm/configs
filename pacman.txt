@@ -1,4 +1,5 @@
 adobe-source-han-sans-jp-fonts
+alacritty
 alsa-utils
 android-studio
 anki
@@ -146,7 +147,6 @@ pulseaudio-alsa
 pyside2
 python-basemap
 python-matplotlib
-python-mistune
 python-networkx
 python-pip
 python-qroundprogressbar
@@ -205,8 +205,10 @@ thunderbird
 tmux
 tor
 tor-browser
+ttf-iosevka-nerd
 ttf-liberation
 ttf-mononoki
+ttf-nerd-fonts-symbols
 tumbler
 unrar
 usb-creator

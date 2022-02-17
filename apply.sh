@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cp ~/Files/Configs/.vimrc ~
+cp ~/Files/Configs/clojure.vim ~/.vim/syntax/clojure.vim
 cp ~/Files/Configs/i3/config ~/.config/i3
 cp ~/Files/Configs/i3status/config ~/.config/i3status
 cp ~/Files/Configs/.xinitrc ~

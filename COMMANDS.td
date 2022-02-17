@@ -130,7 +130,7 @@ ahTui9ee
 
 mf - standard mit n
 mf Nummer: 15389394 2600066201
-TREinzahlung - 8000
+TREinzahlung - 12,000
 
 Nachsendeauftrag:  U6673566  (Bestell: 3207966933)
 
