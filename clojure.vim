@@ -160,7 +160,6 @@ syntax match clojureError "]\|}\|)"
 syntax sync fromstart
 
 " ===== my additions start =====
-syntax match hideDashFunctions /\([A-z]\+-[A-z]\+\)/
 syntax match clojureKeys /\(:[-A-z]\+\)/
 syntax match NegNumbers /\(-[0-9]\+\)/
 syntax match FloatNumbers /\(-\?[0-9]\+\.[0-9]*\)/
@@ -218,9 +217,8 @@ highlight default link clojureError                     Error
 highlight default link clojureParen                     Delimiter
 
 " ===== my additions start =====
-highlight!             hideDashFunctions                ctermfg=LightGrey
-highlight              clojureKeys                      ctermfg=Green
 highlight              clojureComment                   ctermfg=DarkGrey
+highlight              clojureKeys                      ctermfg=Green
 highlight default link NegNumbers                       Number
 highlight default link FloatNumbers                     Number
 " ===== my additions end =====
