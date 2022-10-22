@@ -20,6 +20,7 @@ cheese
 cherrytomato
 chromium
 clisp
+clj-kondo-bin
 clojure
 cmake
 cool-retro-term
@@ -27,6 +28,7 @@ coreutils
 cryptsetup
 csfml
 cups
+cups-pdf
 desmume
 device-mapper
 dhcpcd
@@ -73,6 +75,7 @@ gtk-xfce-engine
 gvfs
 gvim
 gzip
+hplip
 htop
 i3-gaps
 i3lock
@@ -89,7 +92,6 @@ jfsutils
 jitsi
 jre10-openjdk
 jre8-openjdk-headless
-jupyter
 kalarm
 kcachegrind
 krita
@@ -124,6 +126,7 @@ netctl
 network-manager-applet
 networkmanager
 networkmanager-openvpn
+npm
 nvm
 openmp
 openmpi
@@ -140,6 +143,7 @@ perl
 php
 picom
 pkgconf
+pomotroid-bin
 procps-ng
 psmisc
 pulseaudio
@@ -174,6 +178,7 @@ ranger
 redshift
 reiserfsprogs
 ristretto
+rlwrap
 rsync
 s-nail
 sed
@@ -210,6 +215,7 @@ ttf-liberation
 ttf-mononoki
 ttf-nerd-fonts-symbols
 tumbler
+unityhub
 unrar
 usb-creator
 usbutils
@@ -221,6 +227,7 @@ vundle
 weechat
 wget
 which
+wine
 wpa_supplicant
 xf86-input-evdev
 xf86-input-keyboard

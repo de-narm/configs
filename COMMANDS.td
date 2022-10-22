@@ -130,7 +130,7 @@ ahTui9ee
 
 mf - standard mit n
 mf Nummer: 15389394 2600066201
-TREinzahlung - 12,000
+TREinzahlung - 15,000
 
 Nachsendeauftrag:  U6673566  (Bestell: 3207966933)
 
@@ -140,3 +140,6 @@ Waschmaschiene 104925357-SBAY7C
 
 https://github.com/kien/rainbow_parentheses.vim
 Vim.fireplace
+
+MS:
+Standard mit Domainspezi in kurz; Sonderzeug
