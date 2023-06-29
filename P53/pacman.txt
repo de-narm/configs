@@ -26,12 +26,14 @@ networkmanager
 nvidia
 nvidia-settings
 os-prober
+otf-ipaexfont
 pass
 pavucontrol
 picom
 pkgconf
 pulseaudio
 ranger
+steam
 sudo
 telegram-desktop
 texinfo
@@ -39,6 +41,7 @@ thinkfan
 thunar
 thunar-volman
 thunderbird
+ttf-liberation
 udisks2
 unzip
 vim

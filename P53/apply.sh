@@ -9,4 +9,4 @@ cp ~/Files/Configs/P53/90-backlight.conf /etc/udev/rules.d/
 cp ~/Files/Configs/P53/.ycm_extra_conf.py ~
 cp ~/Files/Configs/P53/.tmux.conf ~
 cp ~/Files/Configs/P53/compton.conf ~/.config
-cp -r ~/Files/Configs/P53/Scripts/ ~/Files/Scripts
+cp -r ~/Files/Configs/P53/Scripts ~/Files/Scripts
