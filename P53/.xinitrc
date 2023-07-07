@@ -5,5 +5,6 @@ feh --bg-center /home/de/Files/Configs/P53/purple.png &
 picom --config /home/de/.config/picom.conf -b &
 birdtray &
 discord &
+flameshot &
 telegram-desktop &
 exec i3
