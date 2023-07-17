@@ -2,12 +2,14 @@ acpilight
 alacritty
 alsa-utils
 base
+base-devel
 birdtray
 clj-kondo-bin
 clojure
 cool-retro-term
 discord
 dmenu
+docbook-xsl
 efibootmgr
 fakeroot
 feh
@@ -20,9 +22,11 @@ git
 graphviz
 grub
 gvfs
+gvim
 htop
 i3-wm
 i3status
+intltool
 krita
 linux
 linux-firmware
@@ -32,6 +36,7 @@ man-pages
 networkmanager
 nvidia
 nvidia-settings
+orage
 os-prober
 otf-ipaexfont
 pass
@@ -39,6 +44,7 @@ pavucontrol
 picom
 pkgconf
 polkit-gnome
+pomodoro-logger
 pulseaudio
 ranger
 rlwrap
@@ -55,7 +61,6 @@ ttf-liberation
 tumbler
 udisks2
 unzip
-vim
 which
 xdot
 xf86-input-wacom

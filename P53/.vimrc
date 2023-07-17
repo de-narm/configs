@@ -19,7 +19,7 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=darkgrey
 
 "yank across terminals 
-set clipboard+=unnamend
+"set clipboard+=unnamed
 
 "read changes from outside to opend file
 set autoread
