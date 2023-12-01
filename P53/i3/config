@@ -32,6 +32,21 @@ font pango:monospace 20
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Default floating windows
+for_window [window_role="pop-up"]                       floating enable
+for_window [window_role="bubble"]                       floating enable
+for_window [window_role="task_dialog"]                  floating enable
+for_window [window_role="Preferences"]                  floating enable
+for_window [window_type="dialog"]                       floating enable
+for_window [window_type="menu"]                         floating enable
+for_window [window_role="Organizer"]                    floating enable
+for_window [window_role="About"]                        floating enable
+for_window [window_role="toolbox"]                      floating enable
+for_window [window_role="page-info"]                    floating enable
+for_window [window_role="webconsole"]                   floating enable
+for_window [title="Point Info"]                         floating enable
+for_window [title="(DEBUG)"]                            floating enable
+
 # don't follow mouse
 focus_follows_mouse no
 

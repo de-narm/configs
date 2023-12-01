@@ -160,7 +160,7 @@ syntax match clojureError "]\|}\|)"
 syntax sync fromstart
 
 " ===== my additions start =====
-syntax match clojureKeys /\(:\?:[-A-Za-z]\+\)/
+syntax match clojureKeys /\(:\?:[-A-Za-z0-9]\+\)/
 syntax match NegNumbers /\(-[0-9]\+\)/
 syntax match FloatNumbers /\(-\?[0-9]\+\.[0-9]*\)/
 " ===== my additions end =====

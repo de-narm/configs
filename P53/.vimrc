@@ -35,13 +35,16 @@ set path+=**
 set wildmenu
 
 "tab key uses space
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 
 "neutral sign color
 highlight clear SignColumn
+
+"activate filetype stuff
+filetype plugin indent on
 
 "sign column over number column
 "set signcolumn=number
@@ -70,9 +73,15 @@ let g:clojure_discard_macro = 1
 autocmd Filetype clojure set iskeyword+=-
 
 "clojure tabstops 
- setlocal tabstop=2
+setlocal tabstop=2
 autocmd Filetype clojure setlocal softtabstop=2
 autocmd Filetype clojure setlocal shiftwidth=2
+
+"extra packages
+autocmd Filetype clojure packadd ale
+autocmd Filetype clojure packadd vim-fireplace
+autocmd Filetype clojure packadd vim-cljfmt
+autocmd Filetype * packadd YouCompleteMe
 
 "latex spellcheck 
 autocmd Filetype tex,latex,plaintex setlocal spell spelllang=en_gb
@@ -91,6 +100,26 @@ autocmd Filetype tex,latex,plaintex noremap <silent> $ g$
 "ale
 "vim-gitgutter
 "cljfmt
+"vim-godot
+"youcompleteme
+
+"add godot to ycm
+if !has_key( g:, 'ycm_language_server' )
+  let g:ycm_language_server = []
+endif
+
+let g:ycm_language_server += [
+  \   {
+  \     'name': 'godot',
+  \     'filetypes': [ 'gdscript' ],
+  \     'project_root_files': [ 'project.godot' ],
+  \     'port': 6005
+  \   }
+  \ ]
+
+"youcompleteme
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 "rainbow parenthesis
 let g:rbpt_colorpairs = [
@@ -121,9 +150,9 @@ let g:rbpt_colorpairs = [
     \ ]
 
 autocmd VimEnter *       RainbowParenthesesToggle
-autocmd Syntax   clojure RainbowParenthesesLoadRound
-autocmd Syntax   clojure RainbowParenthesesLoadBraces
-autocmd Syntax   clojure RainbowParenthesesLoadSquare
+autocmd Syntax   *       RainbowParenthesesLoadRound
+autocmd Syntax   *       RainbowParenthesesLoadBraces
+autocmd Syntax   *       RainbowParenthesesLoadSquare
 
 "git gutter
 let g:gitgutter_sign_added = '++'
