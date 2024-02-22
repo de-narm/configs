@@ -8,5 +8,4 @@ orage &
 discord &
 flameshot &
 telegram-desktop &
-pomodoro-logger &
 exec i3

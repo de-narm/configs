@@ -102,6 +102,10 @@ autocmd Filetype tex,latex,plaintex noremap <silent> $ g$
 "cljfmt
 "vim-godot
 "youcompleteme
+"indentLine
+
+"indent line character
+let g:indentLine_char = '┆'
 
 "add godot to ycm
 if !has_key( g:, 'ycm_language_server' )
