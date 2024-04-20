@@ -67,7 +67,7 @@ gnome-keyring
 gnuchess
 gnugo
 gnuplot
-godot4-bin
+godot
 grep
 groff
 grub
@@ -183,6 +183,7 @@ redshift
 reiserfsprogs
 ristretto
 rlwrap
+rofi
 rsync
 s-nail
 sed
@@ -200,8 +201,8 @@ systemd-sysvcompat
 tar
 telegram-desktop
 texinfo
+texlive-basic
 texlive-bibtexextra
-texlive-core
 texlive-fontsextra
 texlive-latexextra
 texlive-pictures
@@ -214,10 +215,11 @@ thunderbird
 tmux
 tor
 tor-browser
+trayer
 ttf-iosevka-nerd
 ttf-liberation
 ttf-mononoki
-ttf-nerd-fonts-symbols-2048-em
+ttf-nerd-fonts-symbols
 tumbler
 unityhub
 unrar
