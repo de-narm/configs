@@ -33,6 +33,7 @@ import System.Exit (exitSuccess)
 --Variables--------------------------------------------------------------------
 
 windowGap   = 5         ::Int      -- Around windows and edge, will be doubled
+
 baseBGColor = "#1D1F21" ::[Char]   -- Header BG, normal windows
 baseHColor  = "#FFFFFF" ::[Char]   -- Highlight, Focus
 baseWColor  = "#F1C40F" ::[Char]   -- Warning, Prompt

@@ -64,7 +64,7 @@ Config { overrideRedirect = False
                         , "--normal"   , "#F1C40F"
                         , "--high"     , "#E74C3C"
                         ] 10
-                    , Run Date "%a %Y-%m-%d [%H:%M]" "date" 10
+                    , Run Date "%a %Y-%m-%d | %H:%M" "date" 10
                     , Run XMonadLog
                     ]
        , sepChar  = "%"
