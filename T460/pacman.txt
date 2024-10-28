@@ -1,12 +1,13 @@
 adobe-source-han-sans-jp-fonts
 alacritty
 alsa-utils
-android-studio
 anki
 arc-gtk-theme
+arm-none-eabi-binutils
 audacity
 autoconf
 automake
+base-devel
 bash
 biber
 binutils
@@ -21,6 +22,7 @@ cherrytomato
 chromium
 clisp
 clj-kondo-bin
+cloc
 clojure
 cmake
 cool-retro-term
@@ -29,6 +31,7 @@ cryptsetup
 csfml
 cups
 cups-pdf
+debugedit
 desmume
 device-mapper
 dhcpcd
@@ -41,6 +44,8 @@ edex-ui
 evince
 exo
 fakeroot
+fcitx-anthy
+fcitx-configtool
 feh
 file
 file-roller
@@ -67,6 +72,7 @@ gnome-keyring
 gnuchess
 gnugo
 gnuplot
+go
 godot
 grep
 groff
@@ -81,6 +87,7 @@ htop
 i3-wm
 i3lock
 i3status
+ibus-anthy
 imagemagick
 inetutils
 inkscape
@@ -89,6 +96,7 @@ iproute2
 iputils
 iw
 jdk-openjdk
+jdk17-openjdk
 jfsutils
 jitsi
 jre10-openjdk
@@ -123,10 +131,16 @@ minecraft-launcher
 mousepad
 mplayer
 nano
+ncdu
 netctl
 network-manager-applet
 networkmanager
 networkmanager-openvpn
+ninja
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
 npm
 nvm
 openmp
@@ -151,7 +165,11 @@ procps-ng
 psmisc
 pulseaudio
 pulseaudio-alsa
+pyinstaller
+pyinstaller-debug
+pyinstaller-hooks-contrib
 pyside2
+python-altgraph
 python-basemap
 python-matplotlib
 python-networkx
@@ -193,7 +211,6 @@ simple-mtpfs
 soil
 sshfs
 steam
-steam-native-runtime
 sudo
 sysfsutils
 system-config-printer
@@ -221,12 +238,10 @@ ttf-liberation
 ttf-mononoki
 ttf-nerd-fonts-symbols
 tumbler
-unityhub
 unrar
 usb-creator
 usbutils
 util-linux
-valgrind
 vi
 virtualbox-guest-iso
 vulkan-intel

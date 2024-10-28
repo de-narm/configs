@@ -35,9 +35,9 @@ set path+=**
 set wildmenu
 
 "tab key uses space
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 
 "neutral sign color
@@ -47,9 +47,9 @@ highlight clear SignColumn
 "set signcolumn=number
 
 "fold all functions when opening file
-"set foldmethod=syntax
-"set foldnestmax=1
-"highlight Folded ctermbg=Black
+set foldmethod=indent
+set foldnestmax=1
+set nofoldenable
 
 """""""""""""""""""""General Keys""""""""""""""""""""""""""""""""""""""""""""""
 "no reselect after indention
@@ -91,6 +91,26 @@ autocmd Filetype tex,latex,plaintex noremap <silent> $ g$
 "ale
 "vim-gitgutter
 "cljfmt
+"vim-godot
+"youcompleteme
+"indentLine
+
+"indent line character
+let g:indentLine_char = '┆'
+
+"add godot to ycm
+if !has_key( g:, 'ycm_language_server' )
+  let g:ycm_language_server = []
+endif
+
+let g:ycm_language_server += [
+  \   {
+  \     'name': 'godot',
+  \     'filetypes': [ 'gdscript' ],
+  \     'project_root_files': [ 'project.godot' ],
+  \     'port': 6005
+  \   }
+  \ ]
 
 "rainbow parenthesis
 let g:rbpt_colorpairs = [
