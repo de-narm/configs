@@ -1,0 +1,74 @@
+Config { overrideRedirect = False
+       , font     = "xft:iosevka-10"
+       , additionalFonts  = ["xft:FontAwesome-10"]
+       , bgColor  = "#1D1F21"
+       , fgColor  = "#F8F8F2"
+       , position = TopSize L 90 19
+       , commands = [Run Battery
+                        [ "--template" , "Bat: <watts>, <left> <timeleft>"
+                        , "--suffix"   , "true"
+                        , "--Low"      , "15"
+                        , "--High"     , "50"
+                        , "--high"     , "#1ABC9C"
+                        , "--normal"   , "#F1C40F"
+                        , "--low"      , "#E74C3C"
+                        -- Battery specific commands; affect watts; test with Battery
+                        --, "--"
+                        --, "--idle"     , " full"
+                        --, "--on"       , " <acstatus>"
+                        --, "--off"      , " <timeleft>" 
+                        ] 100
+                    , Run DiskU [("/", "Disk: <free>"), 
+                                 ("sdb1", "<usedbar>")]
+                        [ "--Low"      , "15"
+                        , "--High"     , "50"
+                        , "--high"     , "#1ABC9C"
+                        , "--normal"   , "#F1C40F"
+                        , "--low"      , "#E74C3C"
+                        ] 100
+                    , Run Cpu
+                        [ "--template" , "Cpu: <total>"
+                        , "--suffix"   , "true"
+                        , "--Low"      , "15"
+                        , "--High"     , "50"
+                        , "--low"      , "#1ABC9C"
+                        , "--normal"   , "#F1C40F"
+                        , "--high"     , "#E74C3C"
+                        ] 10
+                    , Run Alsa "default" "Master"
+                        [ "--template" , "Vol: <volumestatus>"
+                        , "--suffix"   , "true"
+                        , "--Low"      , "15"
+                        , "--High"     , "50"
+                        , "--low"      , "#1ABC9C"
+                        , "--normal"   , "#F1C40F"
+                        , "--high"     , "#E74C3C"
+                        , "--"
+                        , "--on"       , ""
+                        ]
+                    , Run Wireless "wlp4s0" 
+                        [ "--template" , "<essid> <quality>"
+                        , "--suffix"   , "true"
+                        , "--Low"      , "15"
+                        , "--High"     , "50"
+                        , "--low"      , "#E74C3C"
+                        , "--normal"   , "#F1C40F"
+                        , "--high"     , "#1ABC9C"
+                        ] 100
+                    , Run Memory 
+                        [ "--template", "Mem: <usedratio>"
+                        , "--suffix"   , "true"
+                        , "--Low"      , "15"
+                        , "--High"     , "50"
+                        , "--low"      , "#1ABC9C"
+                        , "--normal"   , "#F1C40F"
+                        , "--high"     , "#E74C3C"
+                        ] 10
+                    , Run Date "%a %Y-%m-%d | %H:%M" "date" 10
+                    , Run XMonadLog
+                    ]
+       , sepChar  = "%"
+       , alignSep = "}{"
+       , template = "%XMonadLog% }{ %wlp4s0wi%  | %battery% | %alsa:default:Master% |  %disku% | %cpu% |%memory% | %date% "
+       }
+

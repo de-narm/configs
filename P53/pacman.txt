@@ -80,6 +80,7 @@ thunar-media-tags-plugin
 thunar-volman
 thunderbird
 tmux
+trayer
 ttf-dejavu
 ttf-liberation
 tumbler
@@ -119,6 +120,8 @@ xfce4-wavelan-plugin
 xfce4-weather-plugin
 xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
+xmonad
+xmonad-contrib
 xorg-bdftopcf
 xorg-iceauth
 xorg-mkfontscale
