@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cp ~/.vimrc ~/.xinitrc ~/.tmux.conf ~/Files/Configs/T460
+cp ~/.alacritty.toml ~/Files/Configs/T460
 cp ~/.vim/syntax/clojure.vim ~/Files/Configs/T460
 cp ~/../../etc/X11/xorg.conf ~/Files/Configs/T460
 cp ~/../../etc/profile ~/Files/Configs/T460

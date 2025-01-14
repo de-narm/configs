@@ -193,7 +193,7 @@ bindsym $mod+Shift+b border toggle
 for_window [class=".*"] border pixel -1
 
 # class                 border  backgr. text    indicator (!)child_border
-client.focused          #602f8e #5f2e8d #ffffff #2e9ef4   #602f8e
+client.focused          #bbbbff #5f2e8d #ffffff #2e9ef4   #bbbbff
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -214,14 +214,14 @@ bar {
         font pango:DejaVu Sans Mono 9
 
 		colors {
-			background #082623
+			background #082635
 			statusline #ffffff
 			separator #666666
 
       #                  Border / Filling / Font
 			focused_workspace  #4c7899 #285577 #ffffff
 			active_workspace   #333333 #5f676a #ffffff
-			inactive_workspace #333333 #082623 #888888
+			inactive_workspace #333333 #082635 #888888
 			urgent_workspace   #2f343a #900000 #ffffff
 			binding_mode       #2f343a #900000 #ffffff
 	    }
