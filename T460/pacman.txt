@@ -221,7 +221,9 @@ texinfo
 texlive-basic
 texlive-bibtexextra
 texlive-fontsextra
+texlive-fontsrecommended
 texlive-latexextra
+texlive-luatex
 texlive-pictures
 texstudio
 thunar
