@@ -17,6 +17,7 @@ set number relativenumber
 "mark 80 chars in column
 set colorcolumn=80
 highlight ColorColumn ctermbg=darkgrey
+highlight Comment ctermfg=gray
 
 "yank across terminals 
 set clipboard+=unnamend
@@ -75,7 +76,18 @@ autocmd Filetype clojure setlocal softtabstop=2
 autocmd Filetype clojure setlocal shiftwidth=2
 
 "latex spellcheck 
-autocmd Filetype tex,latex,plaintex setlocal spell spelllang=en_gb
+autocmd Filetype * setlocal spell spelllang=en_gb
+highlight clear SpellBad
+highlight SpellBad cterm=underline ctermfg=red
+highlight clear SpellCap
+highlight SpellCap cterm=underline ctermfg=red
+highlight clear SpellRare
+highlight SpellRare cterm=underline ctermfg=yellow
+highlight clear SpellLocal
+highlight SpellLocal cterm=underline ctermfg=brown
+
+"Prevent conceal in LaTeX files
+let g:tex_conceal = ''
 
 "latex movements in wrapped lines
 autocmd Filetype tex,latex,plaintex noremap <silent> k gk
@@ -163,3 +175,6 @@ highlight ALEErrorSign ctermfg=red
 let g:ale_sign_warning = '◉◉'
 highlight ALEWarningSign ctermfg=yellow
 let g:ale_linters = {'clojure': ['clj-kondo']}
+
+" highlights -> underline
+highlight ALEWarning cterm=underline ctermfg=lightblue

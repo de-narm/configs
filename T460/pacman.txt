@@ -125,6 +125,7 @@ make
 man-db
 man-pages
 mariadb
+maven
 mdadm
 mgba-qt
 minecraft-launcher
@@ -160,6 +161,7 @@ perl
 php
 picom
 pkgconf
+plantuml
 pomotroid-bin
 procps-ng
 psmisc
@@ -220,11 +222,13 @@ telegram-desktop
 texinfo
 texlive-basic
 texlive-bibtexextra
+texlive-binextra
 texlive-fontsextra
 texlive-fontsrecommended
 texlive-latexextra
 texlive-luatex
 texlive-pictures
+texlive-xetex
 texstudio
 thunar
 thunar-archive-plugin
