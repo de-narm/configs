@@ -1,3 +1,4 @@
+7zip
 adobe-source-han-sans-jp-fonts
 alacritty
 alsa-utils
@@ -68,6 +69,7 @@ ghc
 gimp
 git
 glibc
+glow
 gnome-keyring
 gnuchess
 gnugo
@@ -127,6 +129,7 @@ man-pages
 mariadb
 maven
 mdadm
+mermaid-cli
 mgba-qt
 minecraft-launcher
 mousepad
@@ -148,7 +151,6 @@ openmp
 openmpi
 openssh
 orage
-p7zip
 pacman
 pass
 passff-host
@@ -244,6 +246,7 @@ ttf-liberation
 ttf-mononoki
 ttf-nerd-fonts-symbols
 tumbler
+ueberzug
 unrar
 usb-creator
 usbutils
