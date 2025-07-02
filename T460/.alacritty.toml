@@ -1,14 +1,19 @@
 [general]
 import = [
-    "~/.config/alacritty/themes/themes/breeze.toml"
+    "~/.config/alacritty/themes/themes/iris.toml"
 ]
 
 [colors.primary]
-background = "#082635"
+background = "#110f1c"
 
 [font]
-size = 7.0
+size = 8.0
+
+[font.normal]
+family = "comicmono"
 
 [window]
-opacity = 0.95
+opacity = 0.75
+padding.x = 10
+padding.y = 10
 

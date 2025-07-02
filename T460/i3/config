@@ -46,7 +46,7 @@ for_window [window_role="page-info"]   floating enable, move position center
 for_window [window_role="webconsole"]  floating enable, move position center
 for_window [title="Point Info"]        floating enable, move position center
 for_window [title="(DEBUG)"]           floating enable, move position center
-for_window [title="Pomatez"]           floating enable, move position center
+for_window [title="Godot Engine"]      floating disable
 
 # don't follow mouse
 focus_follows_mouse no
@@ -190,14 +190,14 @@ bindsym $mod+Shift+b border toggle
 
 #gaps
 # You can also use any non-zero value if you'd like to have a border
-for_window [class=".*"] border pixel -1
+for_window [class=".*"] border pixel 2
 
 # class                 border  backgr. text    indicator (!)child_border
-client.focused          #bbbbff #5f2e8d #ffffff #2e9ef4   #bbbbff
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          #ffd7ff #ffd7ff #110f1c #ffd7ff   #d3869b44
+client.focused_inactive #d3869b #d3869b #110f1c #d3869b   #110f1cbb
+client.unfocused        #d3869b #d3869b #110f1c #d3869b   #110f1cbb
+client.urgent           #6e3347 #6e3347 #110f1c #6e3347   #110f1cbb
+client.placeholder      #0c0c0c #0c0c0c #110f1c #0c0c0c   #110f1cbb
 
 client.background       #ffffff
 
@@ -214,15 +214,15 @@ bar {
         font pango:DejaVu Sans Mono 9
 
 		colors {
-			background #082635
-			statusline #ffffff
-			separator #666666
+			background #110f1c
+			statusline #eeeeee
+			separator #110f1c
 
       #                  Border / Filling / Font
-			focused_workspace  #4c7899 #285577 #ffffff
-			active_workspace   #333333 #5f676a #ffffff
-			inactive_workspace #333333 #082635 #888888
-			urgent_workspace   #2f343a #900000 #ffffff
-			binding_mode       #2f343a #900000 #ffffff
+			focused_workspace  #3a4270 #3a4270 #eeeeee
+			active_workspace   #6b4459 #6b4459 #eeeeee
+			inactive_workspace #443e62 #443e62 #eeeeee
+			urgent_workspace   #6e3347 #6e3347 #eeeeee
+			binding_mode       #6e3347 #6e3347 #eeeeee
 	    }
 }

@@ -1,11 +1,11 @@
 #mplayer -loop 0 -rootwin -ao null -noconsolecontrols -fs \
 #  /home/de/Files/xMisc/Wallpaper/rose.mp4 &
-feh --bg-scale Files/xMisc/Wallpaper/vibrant.png &
+feh --bg-scale Files/xMisc/Wallpaper/alena-aenami-dreamy-1k.jpg &
 #xset s off -doms & # monitor power saving
 setxkbmap -layout de -option caps:escape &
 gnome-keyring-daemon --start & 
 redshift -l 51.0504:13.7373 &
-telegram-desktop -startintray &
+Telegram -startintray &
 birdtray &
 orage &
 #trayer --edge top --align right --SetDockType true --SetPartialStrut true \

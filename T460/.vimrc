@@ -78,22 +78,28 @@ autocmd Filetype clojure setlocal shiftwidth=2
 "latex spellcheck 
 autocmd Filetype * setlocal spell spelllang=en_gb
 highlight clear SpellBad
-highlight SpellBad cterm=underline ctermfg=red
+highlight SpellBad cterm=underline 
 highlight clear SpellCap
-highlight SpellCap cterm=underline ctermfg=red
+"highlight SpellCap cterm=underline
 highlight clear SpellRare
-highlight SpellRare cterm=underline ctermfg=yellow
+"highlight SpellRare cterm=underline
 highlight clear SpellLocal
-highlight SpellLocal cterm=underline ctermfg=brown
+"highlight SpellLocal cterm=underline
 
 "Prevent conceal in LaTeX files
 let g:tex_conceal = ''
 
-"latex movements in wrapped lines
-autocmd Filetype tex,latex,plaintex noremap <silent> k gk
-autocmd Filetype tex,latex,plaintex noremap <silent> j gj
-autocmd Filetype tex,latex,plaintex noremap <silent> 0 g0
-autocmd Filetype tex,latex,plaintex noremap <silent> $ g$
+"movements in wrapped lines
+autocmd Filetype tex,latex,plaintex,markdown noremap <silent> k gk
+autocmd Filetype tex,latex,plaintex,markdown noremap <silent> j gj
+autocmd Filetype tex,latex,plaintex,markdown noremap <silent> 0 g0
+autocmd Filetype tex,latex,plaintex,markdown noremap <silent> $ g$
+
+"no column with wrapped lines
+autocmd Filetype tex,latex,plaintex,markdown set colorcolumn=0
+
+"don't hide stuff
+autocmd BufEnter * set conceallevel=0
 
 """""""""""""""""""""Extensions""""""""""""""""""""""""""""""""""""""""""""""""
 

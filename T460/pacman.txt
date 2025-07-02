@@ -14,6 +14,7 @@ biber
 binutils
 birdtray
 bison
+blender
 boost
 bzip2
 cabal-install
@@ -105,6 +106,7 @@ jre10-openjdk
 jre8-openjdk-headless
 kalarm
 kcachegrind
+kcolorpicker
 krita
 ktouch
 leiningen
