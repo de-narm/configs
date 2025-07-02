@@ -68,7 +68,7 @@ bindsym $mod+F5 exec xbacklight -dec 10
 bindsym $mod+F6 exec xbacklight -inc 10
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -fn 'Ubuntu Mono:pixelsize=20'
+bindsym $mod+d exec dmenu_run -fn 'Ubuntu Mono:pixelsize=14'
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -193,11 +193,11 @@ bindsym $mod+Shift+b border toggle
 for_window [class=".*"] border pixel -1
 
 # class                 border  backgr. text    indicator (!)child_border
-client.focused          #602f8e #5f2e8d #ffffff #2e9ef4   #ffffff
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          #ffd7ff #ffd7ff #110f1c #ffd7ff   #d3869b44
+client.focused_inactive #d3869b #d3869b #110f1c #d3869b   #110f1cbb
+client.unfocused        #d3869b #d3869b #110f1c #d3869b   #110f1cbb
+client.urgent           #6e3347 #6e3347 #110f1c #6e3347   #110f1cbb
+client.placeholder      #0c0c0c #0c0c0c #110f1c #0c0c0c   #110f1cbb
 
 client.background       #ffffff
 
@@ -209,20 +209,21 @@ smart_borders on
 # finds out, if available)
 bar {
     tray_output primary
-		i3bar_command i3bar
+		i3bar_command i3bar -t
         status_command i3status
         position top
-        font pango:Terminus 10
+        font pango:DejaVu Sans Mono 9
 
 		colors {
-			background #1d1f21
-			statusline #ffffff
-			separator #666666
+			background #110f1c
+			statusline #eeeeee
+			separator #110f1c
 
-			focused_workspace  #4c7899 #285577 #ffffff
-			active_workspace   #333333 #5f676a #ffffff
-			inactive_workspace #333333 #222222 #888888
-			urgent_workspace   #2f343a #900000 #ffffff
-			binding_mode       #2f343a #900000 #ffffff
+      #                  Border / Filling / Font
+			focused_workspace  #3a4270 #3a4270 #eeeeee
+			active_workspace   #6b4459 #6b4459 #eeeeee
+			inactive_workspace #443e62 #443e62 #eeeeee
+			urgent_workspace   #6e3347 #6e3347 #eeeeee
+			binding_mode       #6e3347 #6e3347 #eeeeee
 	    }
 }
