@@ -14,3 +14,4 @@ cp ~/Files/Configs/T460/.ycm_extra_conf.py ~
 cp ~/Files/Configs/T460/.tmux.conf ~
 cp ~/Files/Configs/T460/picom.conf ~/.config/
 cp ~/Files/Configs/T460/COMMANDS.td ~
+cp -r ~/Files/Configs/T460/ranger ~/.config/

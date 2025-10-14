@@ -116,6 +116,9 @@ autocmd BufEnter * set conceallevel=0
 "indent line character
 let g:indentLine_char = '┆'
 
+" YCM enter
+let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+
 "add godot to ycm
 if !has_key( g:, 'ycm_language_server' )
   let g:ycm_language_server = []

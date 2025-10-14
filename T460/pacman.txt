@@ -75,6 +75,8 @@ gnome-keyring
 gnuchess
 gnugo
 gnuplot
+gnuradio-companion
+gnuradio-osmosdr
 go
 godot
 grep
@@ -84,6 +86,7 @@ gtk-engine-murrine
 gtk-xfce-engine
 gvfs
 gvim
+gxml-debug
 gzip
 hplip
 htop
@@ -119,6 +122,7 @@ libstdc++5
 libtool
 licenses
 linux
+linux-firmware
 logrotate
 lshw
 luit
@@ -132,6 +136,7 @@ mariadb
 maven
 mdadm
 mermaid-cli
+meson
 mgba-qt
 minecraft-launcher
 mousepad
@@ -154,6 +159,7 @@ openmpi
 openssh
 orage
 pacman
+pacman-contrib
 pass
 passff-host
 patch
@@ -165,6 +171,7 @@ perl
 php
 picom
 pkgconf
+planify-debug
 plantuml
 pomotroid-bin
 procps-ng
@@ -248,11 +255,13 @@ ttf-liberation
 ttf-mononoki
 ttf-nerd-fonts-symbols
 tumbler
+typst
 ueberzug
 unrar
 usb-creator
 usbutils
 util-linux
+vala
 vi
 virtualbox-guest-iso
 vulkan-intel
@@ -368,3 +377,4 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xournalpp
+xterm

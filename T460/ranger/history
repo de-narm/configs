@@ -1,0 +1,50 @@
+shell vim README.md
+shell mkdir docs
+shell touch index.md
+shell rm architecture 
+shell rm -r architecture
+shell touch architecture.md
+rename directories.md
+shell mkdir architecture
+rename screens.md_
+rename screens.md
+shell mkdir design
+shell s
+rename layers.md
+shell mkdir TODO.md
+shell rm -r TODO.md 
+shell vim TODO.md
+shell vim 
+shell rm layers.md_ 
+rename basics.md
+rename state_management.md
+rename Components.md
+rename components.md
+rename board.md
+shell rm process.md
+shell touch alchemy_names.md
+shell touch alchemy_models.md
+shell rm -r assets 
+shell rm -r docs 
+shell rm -r godot 
+shell rm -r README.md 
+shell rm TODO.md 
+shell rm -r alchematch 
+shell rm -rf alchematch 
+shell mkdir alchematch
+rename alchematch
+shell mkdir godot
+shell rm orb.mtl 
+open_with vim
+shell rm fire.png~ 
+shell 
+shell rm .gitignore 
+shell rm .git 
+shell rm -r .git 
+shell rm -rf .git 
+shell rm orb_shadow.mtl 
+shell rm shadow.png~ 
+open_with 
+shell vim orb_outline.obj 
+find 
+shell mkdir ranger
