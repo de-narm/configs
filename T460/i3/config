@@ -107,6 +107,9 @@ bindsym $mod+Ctrl+4 split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# default layout
+workspace_layout stacking
+
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -193,11 +196,11 @@ bindsym $mod+Shift+b border toggle
 for_window [class=".*"] border pixel 2
 
 # class                 border  backgr. text    indicator (!)child_border
-client.focused          #ffd7ff #ffd7ff #110f1c #ffd7ff   #d3869b44
-client.focused_inactive #d3869b #d3869b #110f1c #d3869b   #110f1cbb
-client.unfocused        #d3869b #d3869b #110f1c #d3869b   #110f1cbb
-client.urgent           #6e3347 #6e3347 #110f1c #6e3347   #110f1cbb
-client.placeholder      #0c0c0c #0c0c0c #110f1c #0c0c0c   #110f1cbb
+client.focused          #38435f #27324f #eeeeee #27324f   #d3869b44
+client.focused_inactive #2b3655 #1a2544 #eeeeee #1a2544   #110f1cbb
+client.unfocused        #3d4353 #2c3242 #eeeeee #2c3242   #110f1cbb
+client.urgent           #5d3f3b #4c2f2a #eeeeee #4c2f2a   #110f1cbb
+client.placeholder      #1d1dd1 #0c0c0c #eeeeee #0c0c0c   #110f1cbb
 
 client.background       #ffffff
 

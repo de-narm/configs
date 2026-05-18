@@ -111,6 +111,10 @@ spack load alpaka
 
 ################################Old############################################
 
+EsTJ AyUw BzVf PRrE Wa1N Kr99 ri1g Wxy6 RKDb XhGe RbBK 52Xj
+
+################################Old############################################
+
 #old hzdr stuff
 makepkg -si
 sshfs hypnos:/home/benner26/HOME/ HZDR/

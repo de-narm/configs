@@ -1,50 +1,50 @@
-shell vim README.md
-shell mkdir docs
-shell touch index.md
-shell rm architecture 
-shell rm -r architecture
-shell touch architecture.md
-rename directories.md
-shell mkdir architecture
-rename screens.md_
-rename screens.md
-shell mkdir design
-shell s
-rename layers.md
-shell mkdir TODO.md
-shell rm -r TODO.md 
-shell vim TODO.md
-shell vim 
-shell rm layers.md_ 
-rename basics.md
-rename state_management.md
-rename Components.md
-rename components.md
-rename board.md
-shell rm process.md
-shell touch alchemy_names.md
-shell touch alchemy_models.md
-shell rm -r assets 
-shell rm -r docs 
-shell rm -r godot 
-shell rm -r README.md 
-shell rm TODO.md 
+shell mkdir legacy
 shell rm -r alchematch 
 shell rm -rf alchematch 
-shell mkdir alchematch
-rename alchematch
+shell rm -rf alchematch-doc 
+shell rm -rf alchematch-old 
+rename ideas
+shell rm ideas.zip 
+shell rm themes 
+shell rm board.md 
+shell mkdir best-practices
+rename addons
+shell mkdir assets
 shell mkdir godot
+shell rm best-practices 
+shell rm -r best-practices 
+shell mkdir architecture
+rename todo.md
+shell mkdir 
+shell mkdir orb
+shell mkdir meshes
+shell touch .gitignore
+shell rm -rf .godot 
+shell mkdir assets-raw
+shell mkdir blender
 shell rm orb.mtl 
-open_with vim
-shell rm fire.png~ 
+shell rm gridLine.mtl 
+shell rm gridCorner.mtl 
+shell touch gridLine.
+shell touch gridLine.gd
+shell gridCorner.gd
+shell touch gridCorner.gd
+shell mkdir classes
+shell touch tile.gd
+shell j
+shell rm block_spawner.gd.uid_ 
+shell touch orb.gd
 shell 
-shell rm .gitignore 
-shell rm .git 
-shell rm -r .git 
-shell rm -rf .git 
-shell rm orb_shadow.mtl 
-shell rm shadow.png~ 
-open_with 
-shell vim orb_outline.obj 
-find 
-shell mkdir ranger
+shell mkdir impressum
+shell rm -rf impressum 
+shell mkdir about
+shell touch +page.svelte
+shell rm index.ts 
+shell touch textbox.svelte
+open_with vim
+shell rm -rf .vscode 
+shell rm -rf docs 
+rename docs
+shell rm -rf build 
+rename listbox.svelte
+shell rm listbox.svelte 

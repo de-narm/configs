@@ -89,6 +89,9 @@ highlight clear SpellLocal
 "Prevent conceal in LaTeX files
 let g:tex_conceal = ''
 
+"svelte = html
+autocmd Filetype svelte set syntax=html
+
 "movements in wrapped lines
 autocmd Filetype tex,latex,plaintex,markdown noremap <silent> k gk
 autocmd Filetype tex,latex,plaintex,markdown noremap <silent> j gj
@@ -120,11 +123,7 @@ let g:indentLine_char = '┆'
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 
 "add godot to ycm
-if !has_key( g:, 'ycm_language_server' )
-  let g:ycm_language_server = []
-endif
-
-let g:ycm_language_server += [
+let g:ycm_language_server = [
   \   {
   \     'name': 'godot',
   \     'filetypes': [ 'gdscript' ],
@@ -132,6 +131,9 @@ let g:ycm_language_server += [
   \     'port': 6005
   \   }
   \ ]
+
+"hide YCM hints in insert mode
+let g:ycm_clear_inlay_hints_in_insert_mode = 1
 
 "rainbow parenthesis
 let g:rbpt_colorpairs = [
@@ -185,5 +187,5 @@ let g:ale_sign_warning = '◉◉'
 highlight ALEWarningSign ctermfg=yellow
 let g:ale_linters = {'clojure': ['clj-kondo']}
 
-" highlights -> underline
+"highlights -> underline
 highlight ALEWarning cterm=underline ctermfg=lightblue

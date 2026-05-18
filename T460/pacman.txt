@@ -41,9 +41,11 @@ dialog
 diffutils
 discord
 dmenu
+docx2txt
 e2fsprogs
 edex-ui
 evince
+ex-vi-compat
 exo
 fakeroot
 fcitx-anthy
@@ -79,6 +81,7 @@ gnuradio-companion
 gnuradio-osmosdr
 go
 godot
+goxel
 grep
 groff
 grub
@@ -116,8 +119,6 @@ leiningen
 less
 libc++
 libc++abi
-libreoffice-fresh
-libreoffice-fresh-de
 libstdc++5
 libtool
 licenses
@@ -154,6 +155,7 @@ noto-fonts-emoji
 noto-fonts-extra
 npm
 nvm
+obsidian
 openmp
 openmpi
 openssh
@@ -220,6 +222,7 @@ s-nail
 sed
 sfml
 shadow
+signal-desktop
 simple-mtpfs
 soil
 sshfs
@@ -256,13 +259,12 @@ ttf-mononoki
 ttf-nerd-fonts-symbols
 tumbler
 typst
-ueberzug
+ueberzugpp
 unrar
 usb-creator
 usbutils
 util-linux
 vala
-vi
 virtualbox-guest-iso
 vulkan-intel
 vundle
