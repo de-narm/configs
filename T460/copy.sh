@@ -11,4 +11,5 @@ cp ~/.config/xmobar/config ~/Files/Configs/T460/xmobar/
 cp ~/.config/i3/config ~/Files/Configs/T460/i3/
 cp ~/.config/i3status/config ~/Files/Configs/T460/i3status/
 cp -r  ~/.config/ranger ~/Files/Configs/T460/
+cp -r  ~/.config/nvim ~/Files/Configs/T460/
 pacman -Qqe > pacman.txt

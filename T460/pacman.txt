@@ -144,6 +144,7 @@ mousepad
 mplayer
 nano
 ncdu
+neovim
 netctl
 network-manager-applet
 networkmanager
@@ -214,6 +215,7 @@ qtpass
 ranger
 redshift
 reiserfsprogs
+ripgrep
 ristretto
 rlwrap
 rofi
@@ -253,6 +255,7 @@ tmux
 tor
 tor-browser
 trayer
+tree-sitter-cli
 ttf-iosevka-nerd
 ttf-liberation
 ttf-mononoki

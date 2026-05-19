@@ -1,5 +1,3 @@
-shell mkdir legacy
-shell rm -r alchematch 
 shell rm -rf alchematch 
 shell rm -rf alchematch-doc 
 shell rm -rf alchematch-old 
@@ -41,10 +39,12 @@ shell mkdir about
 shell touch +page.svelte
 shell rm index.ts 
 shell touch textbox.svelte
-open_with vim
 shell rm -rf .vscode 
 shell rm -rf docs 
 rename docs
 shell rm -rf build 
 rename listbox.svelte
 shell rm listbox.svelte 
+open_with vim
+shell nvim copy.sh 
+shell nvim apply.sh 
