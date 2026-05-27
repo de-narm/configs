@@ -10,7 +10,7 @@ background = "#110f1c"
 size = 7.0
 
 [font.normal]
-family = "comicmono"
+family = "ComicMono"
 
 [window]
 opacity = 0.75

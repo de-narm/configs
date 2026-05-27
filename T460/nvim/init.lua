@@ -25,10 +25,13 @@ vim.o.autoread = true
 
 -- Undo/Swap
 vim.o.undofile = true
-vim.o.swapfile = false
+vim.o.swapfile = true
 
 -- Enable 24 bit colors
 vim.o.termguicolors = true
+
+-- System clipboard
+vim.o.clipboard = "unnamedplus"
 
 -- Syntax
 vim.cmd('filetype plugin indent on')
@@ -56,14 +59,18 @@ vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
 	end,
 })
 
-vim.cmd([[let &t_Cs = "\e[4:3m"]])
-vim.cmd([[let &t_Ce = "\e[4:0m"]])
-
 -- Bindings -------------------------------------------------------------------
 
 -- Leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+-- No Mouse
+vim.keymap.set("", "<up>", "<nop>", { noremap = true })
+vim.keymap.set("", "<down>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<up>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
+vim.opt.mouse = ""
 
 -- Plugins --------------------------------------------------------------------
 
@@ -74,7 +81,7 @@ vim.lsp.enable('gdshader_lsp')
 
 -- Treesitter
 vim.pack.add({ 
-  "nvim-treesitter/nvim-treesitter-textobjects",
+  "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
   "https://github.com/nvim-treesitter/nvim-treesitter"
 })
 local treesitter_filetypes = {
@@ -157,7 +164,10 @@ vim.pack.add({
 })
 require('lualine').setup({
   options = {
-    disabled_filetypes = { "neo-tree" }
+    disabled_filetypes = { "neo-tree" },
+    component_separators = { left = '⬥', right = '⬥'},
+    section_separators = { left = '', right = ''},
+    theme = "palenight"
   }
 })
 
@@ -176,8 +186,43 @@ vim.pack.add({
 })
 require("neo-tree").setup({
   close_if_last_window = true,
+  commands = {
+     parent_or_close = function(state)
+       local node = state.tree:get_node()
+       if (node.type == "directory" or node:has_children()) and node:is_expanded() then
+         state.commands.toggle_node(state)
+       else
+         require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
+       end
+     end,
+     child_or_open = function(state)
+       local node = state.tree:get_node()
+       if node.type == "directory" or node:has_children() then
+         if not node:is_expanded() then -- if unexpanded, expand
+           state.commands.toggle_node(state)
+         else -- if expanded and has children, seleect the next child
+           require("neo-tree.ui.renderer").focus_node(state, node:get_child_ids()[1])
+         end
+       else -- if not a directory just open it
+         state.commands.open(state)
+       end
+     end,
+  },
   window = {
-    width = 40
+    width = 40,
+    mappings = {
+        ["[b"] = "prev_source",
+        ["]b"] = "next_source",
+        ["h"] = "parent_or_close",
+        ["l"] = "child_or_open",
+    }
+  },
+  filesystem = {
+    filtered_items = {
+      visible = true,
+      hide_dotfiles = true,
+      hide_gitignored = true,
+    },
   }
 })
 
@@ -197,10 +242,14 @@ require("bufferline").setup({
     indicator = {
       style = "none"
     },
+    numbers = function(opts)
+      return string.format('%s', opts.raise(opts.id))
+    end,
     diagnostics = "nvim_lsp",
     diagnostics_indicator = function(count, level, diagnostics_dict, context)
       return "("..count..")"
     end,
+    show_buffer_close_icons = false,
     offsets = {
       {
         filetype = "neo-tree",
@@ -208,7 +257,7 @@ require("bufferline").setup({
         highlight = "Directory",
         text_align = "left"
       }
-    }
+    },
   }
 })
 

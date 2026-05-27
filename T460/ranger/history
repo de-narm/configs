@@ -1,12 +1,3 @@
-shell rm -rf alchematch 
-shell rm -rf alchematch-doc 
-shell rm -rf alchematch-old 
-rename ideas
-shell rm ideas.zip 
-shell rm themes 
-shell rm board.md 
-shell mkdir best-practices
-rename addons
 shell mkdir assets
 shell mkdir godot
 shell rm best-practices 
@@ -48,3 +39,12 @@ shell rm listbox.svelte
 open_with vim
 shell nvim copy.sh 
 shell nvim apply.sh 
+shell touch lualine.lua
+open_with nvim
+rename lualine-custom.lua
+rename lualinebubbles.lua
+rename lualine-bubbles.lua
+shell mkdir lua
+shell rm -rf lua
+shell nvim init.lua
+shell nvim init.lua 
