@@ -2,6 +2,7 @@
 
 cp ~/Files/Configs/T460/.vimrc ~
 cp ~/Files/Configs/T460/.alacritty.toml ~
+cp ~/Files/Configs/T460/.bash_profile ~
 cp ~/Files/Configs/T460/clojure.vim ~/.vim/syntax/clojure.vim
 cp ~/Files/Configs/T460/xmonad/xmonad.hs ~/.config/xmonad/
 cp ~/Files/Configs/T460/xmobar/config ~/.config/xmobar/
