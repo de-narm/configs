@@ -14,6 +14,9 @@ vim.o.expandtab = true
 vim.o.autoindent = true
 vim.o.smartindent = true
 
+-- Don't overwrite settings
+vim.cmd('filetype plugin indent off')
+
 -- Column size
 vim.o.colorcolumn = "80"
 
@@ -33,8 +36,6 @@ vim.o.termguicolors = true
 -- System clipboard
 vim.o.clipboard = "unnamedplus"
 
--- Syntax
-vim.cmd('filetype plugin indent on')
 
 -- Diagnostics
 vim.diagnostic.config({
@@ -259,5 +260,28 @@ require("bufferline").setup({
       }
     },
   }
+})
+
+-- Formatter
+vim.pack.add({
+  "https://github.com/stevearc/conform.nvim"
+})
+require("conform").setup({
+  formatters_by_ft = {
+    gdscript = { "gdscriptformatter", stop_after_first = true },
+  },
+  formatters = {
+    gdscriptformatter = {
+      command = "gdscript-formatter",
+      args = { "--safe", "--use-spaces", "--indent-size", "2" },
+      stdin = true,
+    },
+  },
+})
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*", 
+  callback = function(args)
+    require("conform").format({ bufnr = args.buf })
+  end,
 })
 

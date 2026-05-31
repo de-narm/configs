@@ -12,6 +12,10 @@
       "rev": "cbc7b02bb99fae35cb42f514762b89b5126651ef",
       "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
     },
+    "conform.nvim": {
+      "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
     "cyberdream.nvim": {
       "rev": "d1866f5b606896ca530be00bafbd12a3e6bb6efd",
       "src": "https://github.com/scottmckendry/cyberdream.nvim"
