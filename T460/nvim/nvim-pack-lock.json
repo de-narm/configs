@@ -12,6 +12,10 @@
       "rev": "cbc7b02bb99fae35cb42f514762b89b5126651ef",
       "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
     },
+    "cmp-path": {
+      "rev": "c642487086dbd9a93160e1679a1327be111cbc25",
+      "src": "https://github.com/hrsh7th/cmp-path"
+    },
     "conform.nvim": {
       "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
       "src": "https://github.com/stevearc/conform.nvim"
@@ -43,6 +47,10 @@
     "lavi": {
       "rev": "48a46015674f8f28308a9eee5dda6b6bf404a72d",
       "src": "https://github.com/b0o/lavi"
+    },
+    "lazygit.nvim": {
+      "rev": "a04ad0dbc725134edbee3a5eea29290976695357",
+      "src": "https://github.com/kdheepak/lazygit.nvim"
     },
     "lualine.nvim": {
       "rev": "131a558e13f9f28b15cd235557150ccb23f89286",
@@ -87,6 +95,10 @@
     "rainbow-delimiters.nvim": {
       "rev": "a798325b7f36acc62741d1029930a7b96d4dd4bf",
       "src": "https://github.com/HiPhish/rainbow-delimiters.nvim"
+    },
+    "rnvimr": {
+      "rev": "8bd6e3ac0ae515c2745a2274dacf2c1cc43b607f",
+      "src": "https://github.com/kevinhwang91/rnvimr"
     },
     "synthweave.nvim": {
       "rev": "0520bc260674745cdd3b5465f322de5731217dc6",

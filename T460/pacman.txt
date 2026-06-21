@@ -115,6 +115,7 @@ kcachegrind
 kcolorpicker
 krita
 ktouch
+lazygit
 leiningen
 less
 libc++
@@ -190,6 +191,7 @@ python-basemap
 python-matplotlib
 python-networkx
 python-pip
+python-pynvim
 python-qroundprogressbar
 python-sip4
 python-utils

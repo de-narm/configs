@@ -1,6 +1,6 @@
 #mplayer -loop 0 -rootwin -ao null -noconsolecontrols -fs \
 #  /home/de/Files/xMisc/Wallpaper/rose.mp4 &
-feh --bg-scale Files/xMisc/Wallpaper/alena-aenami-dreamy-1k.jpg &
+feh --bg-scale ~/Files/xMisc/Wallpaper/Wallpaper_Mikael_Gustafsson.png &
 xset -dpms & # monitor power saving
 xset s off & # monitor power saving
 setxkbmap -layout de -option caps:escape &

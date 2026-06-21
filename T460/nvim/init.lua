@@ -36,7 +36,6 @@ vim.o.termguicolors = true
 -- System clipboard
 vim.o.clipboard = "unnamedplus"
 
-
 -- Diagnostics
 vim.diagnostic.config({
   virtual_text = false,
@@ -105,7 +104,8 @@ vim.api.nvim_create_autocmd('FileType', {
 vim.pack.add({ 
   "https://github.com/hrsh7th/nvim-cmp",
   "https://github.com/hrsh7th/cmp-nvim-lsp",
-  "https://github.com/hrsh7th/cmp-buffer"
+  "https://github.com/hrsh7th/cmp-buffer",
+  "https://github.com/hrsh7th/cmp-path"
 })
 local cmp = require("cmp")
 require("cmp").setup({
@@ -127,6 +127,7 @@ require("cmp").setup({
   sources = {
     { name = 'nvim_lsp' },
     { name = 'buffer' },
+    { name = 'path' },
   }
 })
 
@@ -179,53 +180,70 @@ require('gitsigns').setup({
 })
 
 -- File tree
+-- vim.pack.add({
+--   "https://github.com/nvim-lua/plenary.nvim",
+--   "https://github.com/MunifTanjim/nui.nvim",
+--   "https://github.com/nvim-tree/nvim-web-devicons",
+--   "https://github.com/nvim-neo-tree/neo-tree.nvim"
+-- })
+-- require("neo-tree").setup({
+--   -- close_if_last_window = true, -- sidebar
+--   commands = {
+--      parent_or_close = function(state)
+--        local node = state.tree:get_node()
+--        if (node.type == "directory" or node:has_children()) and node:is_expanded() then
+--          state.commands.toggle_node(state)
+--        else
+--          require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
+--        end
+--      end,
+--      child_or_open = function(state)
+--        local node = state.tree:get_node()
+--        if node.type == "directory" or node:has_children() then
+--          if not node:is_expanded() then -- if unexpanded, expand
+--            state.commands.toggle_node(state)
+--          else -- if expanded and has children, seleect the next child
+--            require("neo-tree.ui.renderer").focus_node(state, node:get_child_ids()[1])
+--          end
+--        else -- if not a directory just open it
+--          state.commands.open(state)
+--        end
+--      end,
+--   },
+--   window = {
+--     -- width = 40, -- sidebar
+--     position = "float", -- float
+--     mappings = {
+--         ["[b"] = "prev_source",
+--         ["]b"] = "next_source",
+--         ["h"] = "parent_or_close",
+--         ["l"] = "child_or_open",
+--     }
+--   },
+--   filesystem = {
+--     filtered_items = {
+--       visible = true,
+--       hide_dotfiles = true,
+--       hide_gitignored = true,
+--     },
+--   }
+-- })
+-- vim.keymap.set('n', '<leader>n', "<Cmd>Neotree<CR>")
+
+-- Ranger
+-- external: (ranger, pynvim, ueberzugpp)
+vim.pack.add({
+  "https://github.com/kevinhwang91/rnvimr",
+})
+vim.keymap.set('n', '<leader>n', "<Cmd>RnvimrToggle<CR>")
+
+-- Lazygit
+-- external: (lazygit)
 vim.pack.add({
   "https://github.com/nvim-lua/plenary.nvim",
-  "https://github.com/MunifTanjim/nui.nvim",
-  "https://github.com/nvim-tree/nvim-web-devicons",
-  "https://github.com/nvim-neo-tree/neo-tree.nvim"
+  "https://github.com/kdheepak/lazygit.nvim",
 })
-require("neo-tree").setup({
-  close_if_last_window = true,
-  commands = {
-     parent_or_close = function(state)
-       local node = state.tree:get_node()
-       if (node.type == "directory" or node:has_children()) and node:is_expanded() then
-         state.commands.toggle_node(state)
-       else
-         require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
-       end
-     end,
-     child_or_open = function(state)
-       local node = state.tree:get_node()
-       if node.type == "directory" or node:has_children() then
-         if not node:is_expanded() then -- if unexpanded, expand
-           state.commands.toggle_node(state)
-         else -- if expanded and has children, seleect the next child
-           require("neo-tree.ui.renderer").focus_node(state, node:get_child_ids()[1])
-         end
-       else -- if not a directory just open it
-         state.commands.open(state)
-       end
-     end,
-  },
-  window = {
-    width = 40,
-    mappings = {
-        ["[b"] = "prev_source",
-        ["]b"] = "next_source",
-        ["h"] = "parent_or_close",
-        ["l"] = "child_or_open",
-    }
-  },
-  filesystem = {
-    filtered_items = {
-      visible = true,
-      hide_dotfiles = true,
-      hide_gitignored = true,
-    },
-  }
-})
+vim.keymap.set('n', '<leader>g', "<Cmd>LazyGit<CR>")
 
 -- File fuzzy finder
 vim.pack.add({
@@ -233,34 +251,35 @@ vim.pack.add({
   "https://github.com/nvim-telescope/telescope.nvim",
   "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
 })
-vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files)
-vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep)
+vim.keymap.set('n', '<leader>f', require('telescope.builtin').find_files)
+vim.keymap.set('n', '<leader>s', require('telescope.builtin').live_grep)
+vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers)
 
 -- Buffer tabs
-vim.pack.add({ "https://github.com/akinsho/bufferline.nvim" })
-require("bufferline").setup({
-  options = {
-    indicator = {
-      style = "none"
-    },
-    numbers = function(opts)
-      return string.format('%s', opts.raise(opts.id))
-    end,
-    diagnostics = "nvim_lsp",
-    diagnostics_indicator = function(count, level, diagnostics_dict, context)
-      return "("..count..")"
-    end,
-    show_buffer_close_icons = false,
-    offsets = {
-      {
-        filetype = "neo-tree",
-        text = "Neotree",
-        highlight = "Directory",
-        text_align = "left"
-      }
-    },
-  }
-})
+-- vim.pack.add({ "https://github.com/akinsho/bufferline.nvim" })
+-- require("bufferline").setup({
+--   options = {
+--     indicator = {
+--       style = "none"
+--     },
+--     numbers = function(opts)
+--       return string.format('%s', opts.raise(opts.id))
+--     end,
+--     diagnostics = "nvim_lsp",
+--     diagnostics_indicator = function(count, level, diagnostics_dict, context)
+--       return "("..count..")"
+--     end,
+--     show_buffer_close_icons = false,
+--     offsets = {
+--       {
+--         filetype = "neo-tree",
+--         text = "Neotree",
+--         highlight = "Directory",
+--         text_align = "left"
+--       }
+--     },
+--   }
+-- })
 
 -- Formatter
 vim.pack.add({
