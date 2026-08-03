@@ -187,12 +187,10 @@ require('lualine').setup({
 vim.pack.add({ "https://github.com/lewis6991/gitsigns.nvim" })
 require('gitsigns').setup({
   current_line_blame = true,
-  on_attach = function(bufnr)
-    map('n', '<leader>hs', gitsigns.stage_buffer)
-    map('n', '<leader>hr', gitsigns.reset_buffer)
-    map('n', '<leader>hp', gitsigns.preview_hunk_inline)
-  end
 })
+vim.keymap.set('n', '<leader>hs', require('gitsigns').stage_buffer)
+vim.keymap.set('n', '<leader>hr', require('gitsigns').reset_buffer)
+vim.keymap.set('n', '<leader>hp', require('gitsigns').preview_hunk_inline)
 
 -- Ranger
 -- external: (ranger, pynvim, ueberzugpp)
