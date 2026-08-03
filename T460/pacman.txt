@@ -87,6 +87,7 @@ groff
 grub
 gtk-engine-murrine
 gtk-xfce-engine
+gtk3-demos
 gvfs
 gvim
 gxml-debug

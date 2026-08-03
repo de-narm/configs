@@ -26,6 +26,12 @@ vim.o.cursorline = true
 -- Update with external changes
 vim.o.autoread = true
 
+-- Enable folding
+vim.o.foldmethod = 'expr'
+vim.o.foldlevel = 99
+vim.o.foldnestmax = 1
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+
 -- Undo/Swap
 vim.o.undofile = true
 vim.o.swapfile = true
@@ -71,6 +77,10 @@ vim.keymap.set("", "<down>", "<nop>", { noremap = true })
 vim.keymap.set("i", "<up>", "<nop>", { noremap = true })
 vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
 vim.opt.mouse = ""
+
+-- Diagnostics
+vim.keymap.set("n", "<lt>j", vim.diagnostic.goto_next)
+vim.keymap.set("n", "<lt>k", vim.diagnostic.goto_prev)
 
 -- Plugins --------------------------------------------------------------------
 
@@ -178,64 +188,16 @@ vim.pack.add({ "https://github.com/lewis6991/gitsigns.nvim" })
 require('gitsigns').setup({
   current_line_blame = true
 })
-
--- File tree
--- vim.pack.add({
---   "https://github.com/nvim-lua/plenary.nvim",
---   "https://github.com/MunifTanjim/nui.nvim",
---   "https://github.com/nvim-tree/nvim-web-devicons",
---   "https://github.com/nvim-neo-tree/neo-tree.nvim"
--- })
--- require("neo-tree").setup({
---   -- close_if_last_window = true, -- sidebar
---   commands = {
---      parent_or_close = function(state)
---        local node = state.tree:get_node()
---        if (node.type == "directory" or node:has_children()) and node:is_expanded() then
---          state.commands.toggle_node(state)
---        else
---          require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
---        end
---      end,
---      child_or_open = function(state)
---        local node = state.tree:get_node()
---        if node.type == "directory" or node:has_children() then
---          if not node:is_expanded() then -- if unexpanded, expand
---            state.commands.toggle_node(state)
---          else -- if expanded and has children, seleect the next child
---            require("neo-tree.ui.renderer").focus_node(state, node:get_child_ids()[1])
---          end
---        else -- if not a directory just open it
---          state.commands.open(state)
---        end
---      end,
---   },
---   window = {
---     -- width = 40, -- sidebar
---     position = "float", -- float
---     mappings = {
---         ["[b"] = "prev_source",
---         ["]b"] = "next_source",
---         ["h"] = "parent_or_close",
---         ["l"] = "child_or_open",
---     }
---   },
---   filesystem = {
---     filtered_items = {
---       visible = true,
---       hide_dotfiles = true,
---       hide_gitignored = true,
---     },
---   }
--- })
--- vim.keymap.set('n', '<leader>n', "<Cmd>Neotree<CR>")
+map('n', '<leader>hs', gitsigns.stage_buffer)
+map('n', '<leader>hr', gitsigns.reset_buffer)
+map('n', '<leader>hp', gitsigns.preview_hunk_inline)
 
 -- Ranger
 -- external: (ranger, pynvim, ueberzugpp)
 vim.pack.add({
   "https://github.com/kevinhwang91/rnvimr",
 })
-vim.keymap.set('n', '<leader>n', "<Cmd>RnvimrToggle<CR>")
+vim.keymap.set('n', '<leader>r', "<Cmd>RnvimrToggle<CR>")
 
 -- Lazygit
 -- external: (lazygit)
@@ -251,35 +213,19 @@ vim.pack.add({
   "https://github.com/nvim-telescope/telescope.nvim",
   "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
 })
+require('telescope').setup({
+  defaults = {
+    mappings = {
+      i = {
+        ['<c-d>'] = require('telescope.actions').delete_buffer
+      }
+    }
+  }
+})
 vim.keymap.set('n', '<leader>f', require('telescope.builtin').find_files)
 vim.keymap.set('n', '<leader>s', require('telescope.builtin').live_grep)
 vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers)
-
--- Buffer tabs
--- vim.pack.add({ "https://github.com/akinsho/bufferline.nvim" })
--- require("bufferline").setup({
---   options = {
---     indicator = {
---       style = "none"
---     },
---     numbers = function(opts)
---       return string.format('%s', opts.raise(opts.id))
---     end,
---     diagnostics = "nvim_lsp",
---     diagnostics_indicator = function(count, level, diagnostics_dict, context)
---       return "("..count..")"
---     end,
---     show_buffer_close_icons = false,
---     offsets = {
---       {
---         filetype = "neo-tree",
---         text = "Neotree",
---         highlight = "Directory",
---         text_align = "left"
---       }
---     },
---   }
--- })
+vim.keymap.set('n', '<leader> ', "<Cmd>:Telescope resume<CR>")
 
 -- Formatter
 vim.pack.add({
