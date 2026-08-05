@@ -62,7 +62,7 @@ vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
   pattern = { '*' },
   callback = function()
 		vim.diagnostic.open_float(nil, { focus = false })
-	end,
+end,
 })
 
 -- Bindings -------------------------------------------------------------------
@@ -79,8 +79,11 @@ vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
 vim.opt.mouse = ""
 
 -- Diagnostics
-vim.keymap.set("n", "<lt>j", vim.diagnostic.goto_next)
-vim.keymap.set("n", "<lt>k", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "<leader>j", vim.diagnostic.goto_next)
+vim.keymap.set("n", "<leader>k", vim.diagnostic.goto_prev)
+
+--Signature
+vim.keymap.set("n", "<leader>i" , vim.lsp.buf.hover)
 
 -- Plugins --------------------------------------------------------------------
 
