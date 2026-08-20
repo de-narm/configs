@@ -39,6 +39,9 @@ vim.o.termguicolors = true
 -- System clipboard
 vim.o.clipboard = "unnamedplus"
 
+-- No Mouse
+vim.opt.mouse = ""
+
 -- Diagnostics
 vim.diagnostic.config({
   virtual_text = false,
@@ -58,6 +61,10 @@ vim.o.updatetime = 250
 vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
   pattern = { '*' },
   callback = function()
+		-- don't evict a manually opened float (hover etc.); they share
+		-- lsp_floating_preview and would be replaced otherwise
+		local win = vim.b.lsp_floating_preview
+		if win and vim.api.nvim_win_is_valid(win) then return end
 		vim.diagnostic.open_float(nil, { focus = false })
 	end,
 })
@@ -72,7 +79,7 @@ vim.g.maplocalleader = " "
 vim.keymap.set("n", "<leader>j", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<leader>k", vim.diagnostic.goto_prev)
 
---Signature
+-- Signature
 vim.keymap.set("n", "<leader>i" , vim.lsp.buf.hover)
 
 -- Plugins --------------------------------------------------------------------
@@ -89,16 +96,16 @@ vim.lsp.enable('html')
 
 -- Treesitter
 -- external: (tree-sitter-cli)
-vim.pack.add({ 
+vim.pack.add({
   "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
   "https://github.com/nvim-treesitter/nvim-treesitter"
 })
 local treesitter_filetypes = {
-  'java', 
+  'java',
   'kotlin',
   'svelte',
   'typescript',
-  'lua', 
+  'lua',
   'html',
 }
 require('nvim-treesitter').install(treesitter_filetypes)
@@ -113,7 +120,7 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 -- Completion
-vim.pack.add({ 
+vim.pack.add({
   "https://github.com/hrsh7th/nvim-cmp",
   "https://github.com/hrsh7th/cmp-nvim-lsp",
   "https://github.com/hrsh7th/cmp-buffer",
@@ -243,7 +250,7 @@ require("conform").setup({
   },
 })
 vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*", 
+  pattern = "*",
   callback = function(args)
     require("conform").format({ bufnr = args.buf })
   end,
@@ -302,15 +309,3 @@ require("neo-tree").setup({
   }
 })
 vim.keymap.set('n', '<leader>n', "<Cmd>Neotree toggle<CR>")
-
--- Minimap
-vim.pack.add({
-    { src = "https://github.com/Isrothy/neominimap.nvim" },
-})
-vim.opt.sidescrolloff = 36
-vim.g.neominimap = {
-    auto_enable = true,
-    click = {
-      enabled = true
-    }
-}
