@@ -69,6 +69,11 @@ vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
 	end,
 })
 
+-- Folding
+vim.o.foldlevel = 99   -- start with all folds open
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
 -- Bindings -------------------------------------------------------------------
 
 -- Leader
